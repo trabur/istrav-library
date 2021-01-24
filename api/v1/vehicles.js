@@ -1,4 +1,4 @@
-let axios = require('../../node_modules/axios/dist/axios.js')
+require('../../node_modules/axios/dist/axios.js')
 
 import { version } from './version.js'
 
