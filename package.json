@@ -1,12 +1,6 @@
 {
   "name": "istrav",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
-  "main": "./api/index.js",
-  "bundledDependencies": [
-    "axios"
-  ],
-  "dependencies": {
-    "axios": "^0.21.1"
-  }
+  "main": "./api/index.js"
 }
