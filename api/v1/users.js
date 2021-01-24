@@ -3,22 +3,24 @@ import version from './version.json'
 
 let host = 'http://localhost:3000'
 let endpoint = 'users'
+let token = ''
 
 function init (config) {
-  if (config.host) { this.host = config.host }
+  if (config.host) { host = config.host }
+  if (config.token) { host = config.token }
 }
 
 export default {
   all: () => {
     let that = this
     return axios
-      .get(`${this.host}/api/${version}/${this.endpoint}`, {})
+      .get(`${host}/api/${version}/${endpoint}`, {})
       .then(function (response) {
-        console.log('all', that.endpoint, response.data)
+        console.log('all', endpoint, response.data)
         return response.data
       })
       .catch(function (error) {
-        console.log('all', that.endpoint, error)
+        console.log('all', endpoint, error)
         return error
       })
   },
@@ -26,15 +28,15 @@ export default {
   register: (params) => {
     let that = this
     return axios
-      .post(`${this.host}/api/${version}/${this.endpoint}`, {
+      .post(`${host}/api/${version}/${endpoint}`, {
         params: params
       })
       .then(function (response) {
-        console.log('register', that.endpoint, response.data)
+        console.log('register', endpoint, response.data)
         return response.data
       })
       .catch(function (error) {
-        console.log('register', that.endpoint, error)
+        console.log('register', endpoint, error)
         return error
       })
   },
@@ -42,15 +44,15 @@ export default {
   login: (params) => {
     let that = this
     return axios
-      .post(`${this.host}/api/${version}/${this.endpoint}/login`, {
+      .post(`${host}/api/${version}/${endpoint}/login`, {
         params: params
       })
       .then(function (response) {
-        console.log('login', that.endpoint, response.data)
+        console.log('login', endpoint, response.data)
         return response.data
       })
       .catch(function (error) {
-        console.log('login', that.endpoint, error)
+        console.log('login', endpoint, error)
         return error
       })
   },
@@ -58,13 +60,13 @@ export default {
   get: (id) => {
     let that = this
     return axios
-      .get(`${this.host}/api/${version}/${this.endpoint}/${id}`)
+      .get(`${host}/api/${version}/${endpoint}/${id}`)
       .then(function (response) {
-        console.log('get', that.endpoint, response.data)
+        console.log('get', endpoint, response.data)
         return response.data
       })
       .catch(function (error) {
-        console.log('get', that.endpoint, error)
+        console.log('get', endpoint, error)
         return error
       })
   },
@@ -72,15 +74,15 @@ export default {
   update: (id, params) => {
     let that = this
     return axios
-      .put(`${this.host}/api/${version}/${this.endpoint}/${id}`, {
+      .put(`${host}/api/${version}/${endpoint}/${id}`, {
         params: params
       })
       .then(function (response) {
-        console.log('update', that.endpoint, response.data)
+        console.log('update', endpoint, response.data)
         return response.data
       })
       .catch(function (error) {
-        console.log('update', that.endpoint, error)
+        console.log('update', endpoint, error)
         return error
       })
   },
@@ -88,13 +90,13 @@ export default {
   remove: (id) => {
     let that = this
     return axios
-      .delete(`${this.host}/api/${version}/${this.endpoint}/${id}`)
+      .delete(`${host}/api/${version}/${endpoint}/${id}`)
       .then(function (response) {
-        console.log('remove', that.endpoint, response.data)
+        console.log('remove', endpoint, response.data)
         return response.data
       })
       .catch(function (error) {
-        console.log('remove', that.endpoint, error)
+        console.log('remove', endpoint, error)
         return error
       })
   }
