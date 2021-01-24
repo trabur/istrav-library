@@ -1,0 +1,6 @@
+ISTRAV
+========
+
+```bash
+$ npm publish
+```
