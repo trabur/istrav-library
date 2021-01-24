@@ -12,7 +12,7 @@ export function init (config) {
 
 export function all () {
   return axios
-    .get(`${host}/api/${version}/${endpoint}`, {})
+    .get(`${host}/${version}/${endpoint}`, {})
     .then(function (response) {
       console.log('all', endpoint, response.data)
       return response.data
@@ -25,7 +25,7 @@ export function all () {
 
 export function register (params) {
   return axios
-    .post(`${host}/api/${version}/${endpoint}`, {
+    .post(`${host}/${version}/${endpoint}`, {
       params: params
     })
     .then(function (response) {
@@ -40,7 +40,7 @@ export function register (params) {
 
 export function login (params) {
   return axios
-    .post(`${host}/api/${version}/${endpoint}/login`, {
+    .post(`${host}/${version}/${endpoint}/login`, {
       params: params
     })
     .then(function (response) {
@@ -55,7 +55,7 @@ export function login (params) {
 
 export function get (id) {
   return axios
-    .get(`${host}/api/${version}/${endpoint}/${id}`)
+    .get(`${host}/${version}/${endpoint}/${id}`)
     .then(function (response) {
       console.log('get', endpoint, response.data)
       return response.data
@@ -68,7 +68,7 @@ export function get (id) {
 
 export function update (id, params) {
   return axios
-    .put(`${host}/api/${version}/${endpoint}/${id}`, {
+    .put(`${host}/${version}/${endpoint}/${id}`, {
       params: params
     })
     .then(function (response) {
@@ -83,7 +83,7 @@ export function update (id, params) {
   
 export function remove (id) {
   return axios
-    .delete(`${host}/api/${version}/${endpoint}/${id}`)
+    .delete(`${host}/${version}/${endpoint}/${id}`)
     .then(function (response) {
       console.log('remove', endpoint, response.data)
       return response.data
