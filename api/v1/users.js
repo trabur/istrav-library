@@ -1,4 +1,5 @@
-import axios from '../../node_modules/axios/index.js'
+require('../../node_modules/axios/index.js')
+
 import version from './version.js'
 
 let host = 'http://localhost:3000'
