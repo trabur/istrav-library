@@ -1,1 +1,1 @@
-export default version = "v1"
+export let version = "v1"

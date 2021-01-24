@@ -1,6 +1,6 @@
 require('../../node_modules/axios/index.js')
 
-import version from './version.js'
+import { version } from './version.js'
 
 let host = 'http://localhost:3000'
 let endpoint = 'users'
