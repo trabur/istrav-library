@@ -1,5 +1,4 @@
-require('../../node_modules/axios/dist/axios.js')
-
+import axios from '../../node_modules/axios/dist/axios.js'
 import { version } from './version.js'
 
 let host = 'http://localhost:3000'
