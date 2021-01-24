@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "./api/index.js",
-  "bundledDependencies": ["axios"],
+  "bundledDependencies": [
+    "axios"
+  ],
   "dependencies": {
     "axios": "^0.21.1"
   }
