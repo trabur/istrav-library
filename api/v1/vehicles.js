@@ -1,4 +1,4 @@
-require('../../node_modules/axios/index.js')
+let axios = require('../../node_modules/axios/dist/axios.js')
 
 import { version } from './version.js'
 
@@ -12,7 +12,6 @@ export function init (config) {
 }
 
 export function all () {
-  let that = this
   return axios
     .get(`${host}/api/${version}/${endpoint}`, {
       headers: {'authorization': `Bearer ${token}`}
@@ -28,7 +27,6 @@ export function all () {
 }
 
 export function save (params) {
-  let that = this
   return axios
     .post(`${host}/api/${version}/${endpoint}`, {
       params: params
@@ -44,7 +42,6 @@ export function save (params) {
 }
 
 export function get (id) {
-  let that = this
   return axios
     .get(`${host}/api/${version}/${endpoint}/${id}`)
     .then(function (response) {
@@ -58,7 +55,6 @@ export function get (id) {
 }
 
 export function update (id, params) {
-  let that = this
   return axios
     .put(`${host}/api/${version}/${endpoint}/${id}`, {
       params: params
@@ -74,7 +70,6 @@ export function update (id, params) {
 }
 
 export function remove (id) {
-  let that = this
   return axios
     .delete(`${host}/api/${version}/${endpoint}/${id}`)
     .then(function (response) {
