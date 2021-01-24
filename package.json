@@ -2,10 +2,7 @@
   "name": "istrav-library",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
-  "scripts": {
-    "build": "tsc"
-  },
+  "main": "./api/index.js",
   "dependencies": {
     "axios": "^0.21.1",
     "typescript": "^4.1.3"
