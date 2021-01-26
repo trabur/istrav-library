@@ -9,9 +9,9 @@ export function init (config) {
   if (config.token) { token = config.token }
 }
 
-export function publish (params) {
+export function publish (id, params) {
   return axios
-    .post(`${host}/${version}/${endpoint}/publish`, {
+    .post(`${host}/${version}/${endpoint}/publish/${id}`, {
       params: params
     })
     .then(function (response) {
