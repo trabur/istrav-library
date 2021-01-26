@@ -13,11 +13,11 @@ export function all () {
   return axios
     .get(`${host}/${version}/${endpoint}`, {})
     .then(function (response) {
-      console.log('all', endpoint, response.data)
+      console.log(`all ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log('all', endpoint, error)
+      console.log(`all ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -28,11 +28,11 @@ export function register (params) {
       params: params
     })
     .then(function (response) {
-      console.log('register', endpoint, response.data)
+      console.log(`register ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log('register', endpoint, error)
+      console.log(`register ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -43,11 +43,11 @@ export function login (params) {
       params: params
     })
     .then(function (response) {
-      console.log('login', endpoint, response.data)
+      console.log(`login ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log('login', endpoint, error)
+      console.log(`login ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -56,11 +56,11 @@ export function get (id) {
   return axios
     .get(`${host}/${version}/${endpoint}/${id}`)
     .then(function (response) {
-      console.log('get', endpoint, response.data)
+      console.log(`get ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log('get', endpoint, error)
+      console.log(`get ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -71,11 +71,11 @@ export function update (id, params) {
       params: params
     })
     .then(function (response) {
-      console.log('update', endpoint, response.data)
+      console.log(`update ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log('update', endpoint, error)
+      console.log(`update ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -84,11 +84,11 @@ export function remove (id) {
   return axios
     .delete(`${host}/${version}/${endpoint}/${id}`)
     .then(function (response) {
-      console.log('remove', endpoint, response.data)
+      console.log(`remove ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log('remove', endpoint, error)
+      console.log(`remove ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
