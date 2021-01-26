@@ -11,7 +11,7 @@ export function init (config) {
 
 export function publish (params) {
   return axios
-    .post(`${host}/${version}/${endpoint}`, {
+    .post(`${host}/${version}/${endpoint}/publish`, {
       params: params
     })
     .then(function (response) {
