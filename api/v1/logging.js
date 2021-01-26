@@ -1,7 +1,7 @@
 import { version } from './version.js'
 
 let host = 'http://localhost:3000'
-let endpoint = 'sources'
+let endpoint = 'logging'
 let token = ''
 
 export function init (config) {
