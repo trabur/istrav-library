@@ -12,6 +12,7 @@ export function init (config) {
 export function all (eventSource) {
   let url = `${host}/${version}/${endpoint}/all`
   eventSource.url = url
+  eventSource.clientAt = Date.now()
   return axios
     .get(url, {
       headers: {'authorization': `Bearer ${token}`},
@@ -30,6 +31,7 @@ export function all (eventSource) {
 export function save (eventSource) {
   let url = `${host}/${version}/${endpoint}/save`
   eventSource.url = url
+  eventSource.clientAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
@@ -47,6 +49,7 @@ export function save (eventSource) {
 export function get (eventSource) {
   let url = `${host}/${version}/${endpoint}/get/${eventSource.arguements.id}`
   eventSource.url = url
+  eventSource.clientAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
@@ -64,6 +67,7 @@ export function get (eventSource) {
 export function update (eventSource) {
   let url = `${host}/${version}/${endpoint}/update/${eventSource.arguements.id}`
   eventSource.url = url
+  eventSource.clientAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
@@ -81,6 +85,7 @@ export function update (eventSource) {
 export function remove (eventSource) {
   let url = `${host}/${version}/${endpoint}/remove/${eventSource.arguements.id}`
   eventSource.url = url
+  eventSource.clientAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
