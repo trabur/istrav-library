@@ -11,7 +11,7 @@ export function init (config) {
 
 export function publish (eventSource) {
   let url = `${host}/${version}/${endpoint}/publish/${eventSource.arguements.id}`
-  eventSource.arguements.url = url
+  eventSource.url = url
   return axios
     .post(url, {
       params: eventSource
@@ -28,7 +28,7 @@ export function publish (eventSource) {
 
 export function consume (eventSource) {
   let url = `${host}/${version}/${endpoint}/consume/${eventSource.arguements.id}`
-  eventSource.arguements.url = url
+  eventSource.url = url
   return axios
     .post(url, {
       params: eventSource
@@ -45,7 +45,7 @@ export function consume (eventSource) {
 
 export function check (eventSource) {
   let url = `${host}/${version}/${endpoint}/check/${eventSource.arguements.id}`
-  eventSource.arguements.url = url
+  eventSource.url = url
   return axios
     .post(url, {
       params: eventSource

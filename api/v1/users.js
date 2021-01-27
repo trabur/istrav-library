@@ -11,7 +11,7 @@ export function init (config) {
 
 export function all (eventSource) {
   let url = `${host}/${version}/${endpoint}/all`
-  eventSource.arguements.url = url
+  eventSource.url = url
   return axios
     .post(url, {
       params: eventSource
@@ -28,7 +28,7 @@ export function all (eventSource) {
 
 export function register (eventSource) {
   let url = `${host}/${version}/${endpoint}/register`
-  eventSource.arguements.url = url
+  eventSource.url = url
   return axios
     .post(url, {
       params: eventSource
@@ -45,7 +45,7 @@ export function register (eventSource) {
 
 export function login (eventSource) {
   let url = `${host}/${version}/${endpoint}/login`
-  eventSource.arguements.url = url
+  eventSource.url = url
   return axios
     .post(url, {
       params: eventSource
@@ -62,7 +62,7 @@ export function login (eventSource) {
 
 export function get (eventSource) {
   let url = `${host}/${version}/${endpoint}/get/${eventSource.arguements.id}`
-  eventSource.arguements.url = url
+  eventSource.url = url
   return axios
     .post(url, {
       params: eventSource
@@ -79,7 +79,7 @@ export function get (eventSource) {
 
 export function update (eventSource) {
   let url = `${host}/${version}/${endpoint}/update/${eventSource.arguements.id}`
-  eventSource.arguements.url = url
+  eventSource.url = url
   return axios
     .post(url, {
       params: eventSource
@@ -96,7 +96,7 @@ export function update (eventSource) {
   
 export function remove (eventSource) {
   let url = `${host}/${version}/${endpoint}/remove/${eventSource.arguements.id}`
-  eventSource.arguements.url = url
+  eventSource.url = url
   return axios
     .post(url, {
       params: eventSource
