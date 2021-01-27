@@ -17,11 +17,11 @@ export function all (eventSource) {
       params: eventSource
     })
     .then(function (response) {
-      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -34,11 +34,11 @@ export function register (eventSource) {
       params: eventSource
     })
     .then(function (response) {
-      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -51,11 +51,11 @@ export function login (eventSource) {
       params: eventSource
     })
     .then(function (response) {
-      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -68,11 +68,11 @@ export function get (eventSource) {
       params: eventSource
     })
     .then(function (response) {
-      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -85,11 +85,11 @@ export function update (eventSource) {
       params: eventSource
     })
     .then(function (response) {
-      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -102,11 +102,11 @@ export function remove (eventSource) {
       params: eventSource
     })
     .then(function (response) {
-      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }

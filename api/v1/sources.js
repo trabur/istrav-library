@@ -17,11 +17,11 @@ export function publish (eventSource) {
       params: eventSource
     })
     .then(function (response) {
-      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -34,11 +34,11 @@ export function consume (eventSource) {
       params: eventSource
     })
     .then(function (response) {
-      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -51,11 +51,11 @@ export function check (eventSource) {
       params: eventSource
     })
     .then(function (response) {
-      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
