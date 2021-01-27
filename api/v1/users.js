@@ -12,12 +12,13 @@ export function init (config) {
 export function all (eventSource) {
   let url = `${host}/${version}/${endpoint}/all`
   eventSource.url = url
-  eventSource.clientAt = Date.now()
+  eventSource.startAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
     })
     .then(function (response) {
+      response.data.finishAt = Date.now()
       console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
@@ -30,12 +31,13 @@ export function all (eventSource) {
 export function register (eventSource) {
   let url = `${host}/${version}/${endpoint}/register`
   eventSource.url = url
-  eventSource.clientAt = Date.now()
+  eventSource.startAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
     })
     .then(function (response) {
+      response.data.finishAt = Date.now()
       console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
@@ -48,12 +50,13 @@ export function register (eventSource) {
 export function login (eventSource) {
   let url = `${host}/${version}/${endpoint}/login`
   eventSource.url = url
-  eventSource.clientAt = Date.now()
+  eventSource.startAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
     })
     .then(function (response) {
+      response.data.finishAt = Date.now()
       console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
@@ -66,12 +69,13 @@ export function login (eventSource) {
 export function get (eventSource) {
   let url = `${host}/${version}/${endpoint}/get/${eventSource.arguements.id}`
   eventSource.url = url
-  eventSource.clientAt = Date.now()
+  eventSource.startAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
     })
     .then(function (response) {
+      response.data.finishAt = Date.now()
       console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
@@ -84,12 +88,13 @@ export function get (eventSource) {
 export function update (eventSource) {
   let url = `${host}/${version}/${endpoint}/update/${eventSource.arguements.id}`
   eventSource.url = url
-  eventSource.clientAt = Date.now()
+  eventSource.startAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
     })
     .then(function (response) {
+      response.data.finishAt = Date.now()
       console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
@@ -102,12 +107,13 @@ export function update (eventSource) {
 export function remove (eventSource) {
   let url = `${host}/${version}/${endpoint}/remove/${eventSource.arguements.id}`
   eventSource.url = url
-  eventSource.clientAt = Date.now()
+  eventSource.startAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
     })
     .then(function (response) {
+      response.data.finishAt = Date.now()
       console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
