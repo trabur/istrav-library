@@ -10,85 +10,91 @@ export function init (config) {
 }
 
 export function all () {
+  let url = `${host}/${version}/${endpoint}`
   return axios
-    .get(`${host}/${version}/${endpoint}`, {})
+    .get(url, {})
     .then(function (response) {
-      console.log(`all ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`all ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
 export function register (params) {
+  let url = `${host}/${version}/${endpoint}`
   return axios
-    .post(`${host}/${version}/${endpoint}`, {
+    .post(url, {
       params: params
     })
     .then(function (response) {
-      console.log(`register ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`register ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
 export function login (params) {
+  let url = `${host}/${version}/${endpoint}/login`
   return axios
-    .post(`${host}/${version}/${endpoint}/login`, {
+    .post(url, {
       params: params
     })
     .then(function (response) {
-      console.log(`login ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`login ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
 export function get (id) {
+  let url = `${host}/${version}/${endpoint}/${id}`
   return axios
-    .get(`${host}/${version}/${endpoint}/${id}`)
+    .get(url)
     .then(function (response) {
-      console.log(`get ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`get ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
 export function update (id, params) {
+  let url = `${host}/${version}/${endpoint}/${id}`
   return axios
-    .put(`${host}/${version}/${endpoint}/${id}`, {
+    .put(url, {
       params: params
     })
     .then(function (response) {
-      console.log(`update ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`update ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
   
 export function remove (id) {
+  let url = `${host}/${version}/${endpoint}/${id}`
   return axios
-    .delete(`${host}/${version}/${endpoint}/${id}`)
+    .delete(url)
     .then(function (response) {
-      console.log(`remove ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`remove ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }

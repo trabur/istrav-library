@@ -10,44 +10,47 @@ export function init (config) {
 }
 
 export function publish (id, params) {
+  let url = `${host}/${version}/${endpoint}/publish/${id}`
   return axios
-    .post(`${host}/${version}/${endpoint}/publish/${id}`, {
+    .post(url, {
       params: params
     })
     .then(function (response) {
-      console.log(`publish ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`publish ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
 export function consume (id, params) {
+  let url = `${host}/${version}/${endpoint}/consume/${id}`
   return axios
-    .post(`${host}/${version}/${endpoint}/consume/${id}`, {
+    .post(url, {
       params: params
     })
     .then(function (response) {
-      console.log(`consume ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`consume ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
 export function check (id) {
+  let url = `${host}/${version}/${endpoint}/check/${id}`
   return axios
-    .get(`${host}/${version}/${endpoint}/check/${id}`)
+    .get(url)
     .then(function (response) {
-      console.log(`check ${version}/${endpoint}: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`check ${version}/${endpoint}: ${JSON.stringify(error, null, 2)}`)
+      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
