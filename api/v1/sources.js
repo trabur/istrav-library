@@ -9,48 +9,53 @@ export function init (config) {
   if (config.token) { token = config.token }
 }
 
-export function publish (id, params) {
-  let url = `${host}/${version}/${endpoint}/publish/${id}`
+export function publish (eventSource) {
+  let url = `${host}/${version}/${endpoint}/publish/${eventSource.arguements.id}`
+  eventSource.arguements.url = url
   return axios
     .post(url, {
-      params: params
+      params: eventSource
     })
     .then(function (response) {
-      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
-export function consume (id, params) {
-  let url = `${host}/${version}/${endpoint}/consume/${id}`
+export function consume (eventSource) {
+  let url = `${host}/${version}/${endpoint}/consume/${eventSource.arguements.id}`
+  eventSource.arguements.url = url
   return axios
     .post(url, {
-      params: params
+      params: eventSource
     })
     .then(function (response) {
-      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
-export function check (id) {
-  let url = `${host}/${version}/${endpoint}/check/${id}`
+export function check (eventSource) {
+  let url = `${host}/${version}/${endpoint}/check/${eventSource.arguements.id}`
+  eventSource.arguements.url = url
   return axios
-    .get(url)
+    .post(url, {
+      params: eventSource
+    })
     .then(function (response) {
-      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }

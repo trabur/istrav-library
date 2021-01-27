@@ -9,92 +9,104 @@ export function init (config) {
   if (config.token) { token = config.token }
 }
 
-export function all () {
-  let url = `${host}/${version}/${endpoint}`
-  return axios
-    .get(url, {})
-    .then(function (response) {
-      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
-      return response.data
-    })
-    .catch(function (error) {
-      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
-      return error
-    })
-}
-
-export function register (params) {
-  let url = `${host}/${version}/${endpoint}`
+export function all (eventSource) {
+  let url = `${host}/${version}/${endpoint}/all`
+  eventSource.arguements.url = url
   return axios
     .post(url, {
-      params: params
+      params: eventSource
     })
     .then(function (response) {
-      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
-export function login (params) {
+export function register (eventSource) {
+  let url = `${host}/${version}/${endpoint}/register`
+  eventSource.arguements.url = url
+  return axios
+    .post(url, {
+      params: eventSource
+    })
+    .then(function (response) {
+      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      return response.data
+    })
+    .catch(function (error) {
+      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
+      return error
+    })
+}
+
+export function login (eventSource) {
   let url = `${host}/${version}/${endpoint}/login`
+  eventSource.arguements.url = url
   return axios
     .post(url, {
-      params: params
+      params: eventSource
     })
     .then(function (response) {
-      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
-export function get (id) {
-  let url = `${host}/${version}/${endpoint}/${id}`
+export function get (eventSource) {
+  let url = `${host}/${version}/${endpoint}/get/${eventSource.arguements.id}`
+  eventSource.arguements.url = url
   return axios
-    .get(url)
+    .post(url, {
+      params: eventSource
+    })
     .then(function (response) {
-      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
 
-export function update (id, params) {
-  let url = `${host}/${version}/${endpoint}/${id}`
+export function update (eventSource) {
+  let url = `${host}/${version}/${endpoint}/update/${eventSource.arguements.id}`
+  eventSource.arguements.url = url
   return axios
-    .put(url, {
-      params: params
+    .post(url, {
+      params: eventSource
     })
     .then(function (response) {
-      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
   
-export function remove (id) {
-  let url = `${host}/${version}/${endpoint}/${id}`
+export function remove (eventSource) {
+  let url = `${host}/${version}/${endpoint}/remove/${eventSource.arguements.id}`
+  eventSource.arguements.url = url
   return axios
-    .delete(url)
+    .post(url, {
+      params: eventSource
+    })
     .then(function (response) {
-      console.log(`${url} ::: ${JSON.stringify(response.data, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`${url} ::: ${JSON.stringify(error, null, 2)}`)
+      console.log(`REST ${url} ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
