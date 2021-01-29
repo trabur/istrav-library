@@ -12,13 +12,12 @@ export function init (config) {
 export function publish (eventSource) {
   let url = `${host}/${version}/${endpoint}/publish/${eventSource.arguements.id}`
   eventSource.url = url
-  eventSource.startAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
     })
     .then(function (response) {
-      response.data.finishAt = Date.now()
+      response.data.clientAt = Date.now()
       console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
@@ -31,13 +30,12 @@ export function publish (eventSource) {
 export function consume (eventSource) {
   let url = `${host}/${version}/${endpoint}/consume/${eventSource.arguements.id}`
   eventSource.url = url
-  eventSource.startAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
     })
     .then(function (response) {
-      response.data.finishAt = Date.now()
+      response.data.clientAt = Date.now()
       console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
@@ -50,13 +48,12 @@ export function consume (eventSource) {
 export function check (eventSource) {
   let url = `${host}/${version}/${endpoint}/check/${eventSource.arguements.id}`
   eventSource.url = url
-  eventSource.startAt = Date.now()
   return axios
     .post(url, {
       params: eventSource
     })
     .then(function (response) {
-      response.data.finishAt = Date.now()
+      response.data.clientAt = Date.now()
       console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
