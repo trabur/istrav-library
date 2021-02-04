@@ -64,7 +64,7 @@ export function login (eventSource) {
 }
 
 export function get (eventSource) {
-  let url = `${host}/${version}/${endpoint}/get/${eventSource.arguements.id}`
+  let url = `${host}/${version}/${endpoint}/get`
   eventSource.url = url
   return axios
     .post(url, {
@@ -82,7 +82,7 @@ export function get (eventSource) {
 }
 
 export function update (eventSource) {
-  let url = `${host}/${version}/${endpoint}/update/${eventSource.arguements.id}`
+  let url = `${host}/${version}/${endpoint}/update`
   eventSource.url = url
   return axios
     .post(url, {
@@ -100,7 +100,7 @@ export function update (eventSource) {
 }
   
 export function remove (eventSource) {
-  let url = `${host}/${version}/${endpoint}/remove/${eventSource.arguements.id}`
+  let url = `${host}/${version}/${endpoint}/remove`
   eventSource.url = url
   return axios
     .post(url, {
