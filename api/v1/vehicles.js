@@ -9,12 +9,11 @@ export function init (config) {
   if (config.token) { host = config.token }
 }
 
-export function all (eventSource) {
-  let url = `${host}/${version}/${endpoint}/all`
+export function save (eventSource) {
+  let url = `${host}/${version}/${endpoint}/save`
   eventSource.url = url
   return axios
     .post(url, {
-      headers: {'authorization': `Bearer ${token}`},
       params: eventSource
     })
     .then(function (response) {
@@ -28,11 +27,12 @@ export function all (eventSource) {
     })
 }
 
-export function save (eventSource) {
-  let url = `${host}/${version}/${endpoint}/save`
+export function all (eventSource) {
+  let url = `${host}/${version}/${endpoint}/all`
   eventSource.url = url
   return axios
     .post(url, {
+      headers: {'authorization': `Bearer ${token}`},
       params: eventSource
     })
     .then(function (response) {
