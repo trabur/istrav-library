@@ -1,6 +1,10 @@
 {
   "name": "istrav",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "",
-  "main": "./api/index.js"
+  "main": "./api/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:trabur/istrav-library.git"
+  }
 }
