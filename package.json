@@ -3,6 +3,7 @@
   "version": "0.0.32",
   "description": "",
   "main": "./api/index.js",
+  "homepage": "https://istrav.com",
   "repository": {
     "type": "git",
     "url": "git@github.com:trabur/istrav-library.git"
