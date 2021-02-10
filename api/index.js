@@ -7,7 +7,7 @@ import * as orders from './v1/orders.js'
 import * as members from './v1/members.js'
 import * as apps from './v1/apps.js'
 import * as vehicles from './v1/vehicles.js'
-import * as featured from './v1/featured.js'
+import * as collections from './v1/collections.js'
 import * as categories from './v1/categories.js'
 import * as products from './v1/products.js'
 
@@ -30,7 +30,7 @@ export let istrav = {
     vehicles
   },
   store: {
-    featured,
+    collections,
     categories,
     products
   }
