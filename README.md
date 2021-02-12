@@ -10,8 +10,3 @@ ISTRAV
 ```bash
 $ npm install istrav
 ```
-
-### update production
-```bash
-$ npm publish
-```

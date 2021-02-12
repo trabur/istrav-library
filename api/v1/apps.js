@@ -118,3 +118,21 @@ export function demo (eventSource) {
     })
 }
 
+export function totals (eventSource) {
+  let url = `${host}/${version}/${endpoint}/totals`
+  eventSource.url = url
+  return axios
+    .post(url, {
+      params: eventSource
+    })
+    .then(function (response) {
+      response.data.clientAt = Date.now()
+      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
+      return response.data
+    })
+    .catch(function (error) {
+      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
+      return error
+    })
+}
+
