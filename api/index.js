@@ -10,6 +10,8 @@ import * as vehicles from './v1/vehicles.js'
 import * as collections from './v1/collections.js'
 import * as categories from './v1/categories.js'
 import * as products from './v1/products.js'
+import * as menus from './v1/menus.js'
+import * as pages from './v1/pages.js'
 
 export let istrav = {
   event: {
@@ -20,6 +22,10 @@ export let istrav = {
   tenant: {
     members,
     apps
+  },
+  app: {
+    menus,
+    pages
   },
   account: {
     users,
