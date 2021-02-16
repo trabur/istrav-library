@@ -1,7 +1,7 @@
 import { version } from './version.js'
 
 let host = 'http://localhost:3000'
-let endpoint = 'apps'
+let component = 'apps'
 let token = ''
 
 export function init (config) {
@@ -10,7 +10,7 @@ export function init (config) {
 }
 
 export function save (eventSource) {
-  let url = `${host}/${version}/${endpoint}/save`
+  let url = `${host}/${version}/${component}/save`
   eventSource.url = url
   return axios
     .post(url, {
@@ -28,7 +28,7 @@ export function save (eventSource) {
 }
 
 export function all (eventSource) {
-  let url = `${host}/${version}/${endpoint}/all`
+  let url = `${host}/${version}/${component}/all`
   eventSource.url = url
   return axios
     .post(url, {
@@ -47,7 +47,7 @@ export function all (eventSource) {
 }
 
 export function get (eventSource) {
-  let url = `${host}/${version}/${endpoint}/get`
+  let url = `${host}/${version}/${component}/get`
   eventSource.url = url
   return axios
     .post(url, {
@@ -65,7 +65,7 @@ export function get (eventSource) {
 }
 
 export function update (eventSource) {
-  let url = `${host}/${version}/${endpoint}/update`
+  let url = `${host}/${version}/${component}/update`
   eventSource.url = url
   return axios
     .post(url, {
@@ -83,7 +83,7 @@ export function update (eventSource) {
 }
 
 export function remove (eventSource) {
-  let url = `${host}/${version}/${endpoint}/remove`
+  let url = `${host}/${version}/${component}/remove`
   eventSource.url = url
   return axios
     .post(url, {
@@ -101,7 +101,7 @@ export function remove (eventSource) {
 }
 
 export function endpoint (eventSource) {
-  let url = `${host}/${version}/${endpoint}/endpoint`
+  let url = `${host}/${version}/${component}/endpoint`
   eventSource.url = url
   return axios
     .post(url, {
@@ -119,7 +119,7 @@ export function endpoint (eventSource) {
 }
 
 export function totals (eventSource) {
-  let url = `${host}/${version}/${endpoint}/totals`
+  let url = `${host}/${version}/${component}/totals`
   eventSource.url = url
   return axios
     .post(url, {
