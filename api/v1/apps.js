@@ -100,8 +100,8 @@ export function remove (eventSource) {
     })
 }
 
-export function demo (eventSource) {
-  let url = `${host}/${version}/${endpoint}/demo`
+export function endpoint (eventSource) {
+  let url = `${host}/${version}/${endpoint}/endpoint`
   eventSource.url = url
   return axios
     .post(url, {
