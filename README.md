@@ -4,7 +4,7 @@ ISTRAV
 - https://docs.istrav.com
 
 ### commands & scripts
-- https://dashboard.istrav.com
+- https://headless.istrav.com
 
 ### production
 ```bash
