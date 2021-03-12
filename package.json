@@ -1,6 +1,6 @@
 {
   "name": "istrav",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "description": "",
   "main": "./api/index.js",
   "homepage": "https://istrav.com",

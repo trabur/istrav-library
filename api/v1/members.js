@@ -18,11 +18,11 @@ export function register (eventSource) {
     })
     .then(function (response) {
       response.data.clientAt = Date.now()
-      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -36,11 +36,11 @@ export function login (eventSource) {
     })
     .then(function (response) {
       response.data.clientAt = Date.now()
-      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -54,11 +54,11 @@ export function all (eventSource) {
     })
     .then(function (response) {
       response.data.clientAt = Date.now()
-      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -72,11 +72,11 @@ export function get (eventSource) {
     })
     .then(function (response) {
       response.data.clientAt = Date.now()
-      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -90,11 +90,11 @@ export function update (eventSource) {
     })
     .then(function (response) {
       response.data.clientAt = Date.now()
-      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
@@ -108,11 +108,11 @@ export function remove (eventSource) {
     })
     .then(function (response) {
       response.data.clientAt = Date.now()
-      console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(response.data, null, 2)}`)
       return response.data
     })
     .catch(function (error) {
-      console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
+      // console.log(`REST ::: ${JSON.stringify(error, null, 2)}`)
       return error
     })
 }
